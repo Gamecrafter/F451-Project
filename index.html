@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project F451</title>
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/simpleGame.js"></script>
+        <script src="js/library.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Ignition: 451</h1>
+            <h4>by Victor Truong &amp; Russell Hua</h4>
+            <script>init();</script>
+        </div>
+        <div id="bar">
+            <form>
+                <fieldset>
+                    <input type="text" id="code">
+                    <button type="button" onclick="checkCode();">Use code</button>
+                </fieldset>
+                <p id="outMessage">Enter one of your cheat codes, and see what you'll get in-game!</p>
+            </form>
+        </div>
+        <div id="description">
+            <h2>How To Play</h2>
+            <h3>Goal</h3>
+            <p>
+                Earn as many points as possible. Books are the most valuable, as always! Destroy anything and everything
+                that gets in your way.
+            </p>
+            <h3>Controls</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    &uparrow; (The up arrow)
+                    <p>
+                        Moves Montag up.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    &downarrow; (The down arrow)
+                    <p>
+                        Moves Montag down.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    &leftarrow; (The left arrow)
+                    <p>
+                        Moves Montag left.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    &rightarrow; (The right arrow)
+                    <p>
+                        Moves Montag right.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    The spacebar
+                    <p>
+                        Makes Montag shoot fireballs, if he has any kerosene.
+                    </p>
+                </div>
+            </div>
+            <h2>What Means What</h2>
+            <h3>Enemies</h3>
+            <p>Nothing to see here yet.</p>
+            <h3>Items</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/book1.png">
+                    <p>
+                        This item is worth ? points.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/book2.png">
+                    <p>
+                        This item is worth ? points.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/book3.png">
+                    <p>
+                        This item is worth ? points.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/book4.png">
+                    <p>
+                        This item is worth ? points.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/book5.png">
+                    <p>
+                        This item is worth ? points.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/canister.png">
+                    <p>
+                        This item restores your kerosene tank, if it is not full.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/heart.png">
+                    <p>
+                        This item restores your health by one heart, if it is not full.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            &copy; 2016 Gamecrafter
+        </div>
+    </body>
+</html>
