@@ -10,17 +10,39 @@
     </head>
     <body>
         <div id="header">
-            <h1>Ignition: 451</h1>
-            <h4>by Victor Truong &amp; Russell Hua</h4>
-            <script>init();</script>
+            <h1 id="titleCode">Ignition: <span class="code" onclick="reveal();">451</span></h1>
+            <h4 style="color:#b23000;">by Victor Truong</h4>
+            <span class="hiddenCode">Cheat code: "451"</span>
+            <div id="info">
+                <h3>
+                    Score: <strong><span id="score">0</span></strong> /
+                    Time: <strong><span id="time2">120</span></strong> /
+                    <img src="images/heart.png" style="height:24px;width:24px;"> <strong><span id="health">50</span></strong> / 
+                    <img src="images/canister.png" style="height:24px;width:24px"> <strong><span id="kerosene">100</span></strong> /
+                    Cheats: <strong><span id="cheats">Off</span></strong>
+                    <button type="button" onclick="togglePause();">Pause</button>
+                </h3>
+            </div>
+            <div id="gameScreen">
+                <script>init();</script>
+            </div>
+            <div id="gameStart">
+                <h1>Starting in <strong><span id="time1">10</span></strong>...</h1>
+                <h4>Now is the best time to warm up and enter your cheat codes.</h4>
+            </div>
+            <div id="gameOver"></div>
         </div>
         <div id="bar">
             <form>
+                <p>
+                    Enter a cheat code below to activate its in-game effects.
+                    <span class="hiddenCode">Cheat code: "library"</span>
+                </p>
                 <fieldset>
-                    <input type="text" id="code">
-                    <button type="button" onclick="checkCode();">Use code</button>
+                    <input type="password" id="code">
+                    <button type="button" onclick="checkCode();">Use</button>
                 </fieldset>
-                <p id="outMessage">Enter one of your cheat codes, and see what you'll get in-game!</p>
+                <p id="outMessage"></p>
             </form>
         </div>
         <div id="description">
@@ -28,70 +50,112 @@
             <h3>Goal</h3>
             <p>
                 Earn as many points as possible. Books are the most valuable, as always! Destroy anything and everything
-                that gets in your way.
+                that gets in your way. Don't get killed in the process!
             </p>
             <h3>Controls</h3>
             <div class="row">
                 <div class="col-md-3">
-                    &uparrow; (The up arrow)
                     <p>
+                        <strong>&uparrow; (The up arrow)</strong><br>
                         Moves Montag up.
                     </p>
                 </div>
                 <div class="col-md-3">
-                    &downarrow; (The down arrow)
                     <p>
+                        <strong>&downarrow; (The down arrow)</strong><br>
                         Moves Montag down.
                     </p>
                 </div>
                 <div class="col-md-3">
-                    &leftarrow; (The left arrow)
                     <p>
-                        Moves Montag left.
+                        <strong>&leftarrow; (The left arrow)</strong><br>
+                        Moves Montag left. <span class="hiddenCode">Cheat code: "endgame"</span>
                     </p>
                 </div>
                 <div class="col-md-3">
-                    &rightarrow; (The right arrow)
                     <p>
+                        <strong>&rightarrow; (The right arrow)</strong><br>
                         Moves Montag right.
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    The spacebar
                     <p>
+                        <strong>The spacebar</strong><br>
                         Makes Montag shoot fireballs, if he has any kerosene.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <strong>The return key</strong><br>
+                        Uses the input cheat code.
                     </p>
                 </div>
             </div>
             <h2>What Means What</h2>
-            <h3>Enemies</h3>
-            <p>Nothing to see here yet.</p>
+            <h3>Entities</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/playeralt.png">
+                    <p>
+                        <strong>Montag (You)</strong><br>
+                        Montag has 100 health points, and shoots fireballs.
+                        <span class="hiddenCode">Cheat code: "wave"</span>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/firemanalt.png">
+                    <p>
+                        <strong>Firemen</strong><br>
+                        Firemen have an 80% chance of spawning, 5 health points, worth 10 points, and by far the
+                        slowest enemy in the game.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/beetle.png">
+                    <p>
+                        <strong>Beetle</strong><br>
+                        Beetles have a 15% chance of spawning, 30 health points, worth 20 points, and by far the
+                        fastest enemy in the game.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/hound.png">
+                    <p>
+                        <strong>Hound</strong><br>
+                        Hounds have a 5% chance of spawning, 80 health points, and are worth 40 points.
+                    </p>
+                </div>
+            </div>
             <h3>Items</h3>
             <div class="row">
                 <div class="col-md-3">
                     <img src="images/book1.png">
                     <p>
-                        This item is worth ? points.
+                        <strong>Book I</strong><br> 
+                        This item is worth 10 points. 70% spawn chance.
                     </p>
                 </div>
                 <div class="col-md-3">
                     <img src="images/book2.png">
                     <p>
-                        This item is worth ? points.
+                        <strong>Book II</strong><br> 
+                        This item is worth 20 points. 70% spawn chance.
                     </p>
                 </div>
                 <div class="col-md-3">
                     <img src="images/book3.png">
                     <p>
-                        This item is worth ? points.
+                        <strong>Book III</strong><br> 
+                        This item is worth 30 points. 70% spawn chance.
                     </p>
                 </div>
                 <div class="col-md-3">
                     <img src="images/book4.png">
                     <p>
-                        This item is worth ? points.
+                        <strong>Book IV</strong><br> 
+                        This item is worth 40 points. 70% spawn chance.
                     </p>
                 </div>
             </div>
@@ -99,25 +163,48 @@
                 <div class="col-md-3">
                     <img src="images/book5.png">
                     <p>
-                        This item is worth ? points.
+                        <strong>Book V</strong><br> 
+                        This item is worth 50 points. 70% spawn chance.
                     </p>
                 </div>
                 <div class="col-md-3">
                     <img src="images/canister.png">
                     <p>
-                        This item restores your kerosene tank, if it is not full.
+                        <strong>Kerosene canister</strong><br> 
+                        This item adds 20 to your kerosene, if it is not full. 20% spawn chance.
                     </p>
                 </div>
                 <div class="col-md-3">
                     <img src="images/heart.png">
                     <p>
-                        This item restores your health by one heart, if it is not full.
+                        <strong>Heart</strong><br>
+                        This item increases your health by 10 points, if it is not full. 10% spawn chance.
+                        <span class="hiddenCode">Cheat code: "phoenix"</span>
+                    </p>
+                </div>
+            </div>
+            <h3>Miscellaneous</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/fireball.png">
+                    <p>
+                        <strong>Fireball</strong><br>
+                        This is the stuff that comes out of Montag when you press the spacebar. Deals 5 damage to
+                        whatever it hits, other than the shooter.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/cursor.png">
+                    <p>
+                        <strong>Hidden thing detector cursor</strong><br>
+                        Something must be hidden where you hovered over with your mouse.
                     </p>
                 </div>
             </div>
         </div>
         <div id="footer">
-            &copy; 2016 Gamecrafter
+            &copy; 2016 Gamecrafter <span class="hiddenCode">Cheat code: "bible"</span>
         </div>
+        <script>cycleColors();</script>
     </body>
 </html>

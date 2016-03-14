@@ -3,7 +3,8 @@
     src: url(../fonts/Orbitron.ttf);
 }
 ::selection{
-    background: #99ffff;
+    background: #2f4f4f;
+    color: #ffffff;
 }
 body{
     background-attachment: fixed;
@@ -11,6 +12,10 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+button{
+    color: #000000;
+    font-family: "Orbitron";
 }
 img{
     height: 64px;
@@ -23,13 +28,48 @@ canvas{
 #header{
     padding: 16px;
 }
-#header h1, #header h4{
+#header h1, #header h3, #header h4{
     color: #ffffff;
     font-family: "Orbitron";
     text-align: center;
 }
+#titleCode{
+    transition: ease-in-out .6s;
+}
+#gameStart{
+    background: #ee7600;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+    padding: 16px;
+    width: 90%;
+}
+#gameOver{
+    background: #ee7600;
+    border-radius: 50px;
+    display: none;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding: 16px;
+    width: 90%;
+}
+#gameOver h3, gameOver h4{
+    font-family: "Orbitron";
+}
+#gameOver button{
+    display: table;
+    margin: 0 auto;
+}
+#info{
+    background: #cd5c5c;
+    border-radius: 50px;
+    display: none;
+    margin: 0 auto;
+    padding: 8px;
+    width: 75%;
+}
 #bar{
-    background: #d3d3d3;
+    background: #c5e3bf;
     margin-top: 20px;
     padding: 16px;
 }
@@ -46,4 +86,11 @@ canvas{
     color: #000000;
     padding: 16px;
     width: 100%;
+}
+.code{
+    cursor: url(../images/cursor.png), auto;
+}
+.hiddenCode{
+    color: transparent;
+    cursor: url(../images/cursor.png), auto;
 }
