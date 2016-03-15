@@ -6,12 +6,14 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/simpleGame.js"></script>
-        <script src="js/library.js"></script>
+        <script src="js/objects.js"></script>
+        <script src="js/core.js"></script>
     </head>
     <body>
         <div id="header">
             <h1 id="titleCode">Ignition: <span class="code" onclick="reveal();">451</span></h1>
             <h4 style="color:#b23000;">by Victor Truong</h4>
+            <h6 style="color:#d3d3d3;">Inspired by the book <em>Fahrenheit 451</em> by Ray Bradbury</h6>
             <span class="hiddenCode">Cheat code: "451"</span>
             <div id="info">
                 <h3>
@@ -29,6 +31,7 @@
             <div id="gameStart">
                 <h1>Starting in <strong><span id="time1">10</span></strong>...</h1>
                 <h4>Now is the best time to warm up and enter your cheat codes.</h4>
+                <span class="hiddenCode">Cheat code: "dandelion"</span>
             </div>
             <div id="gameOver"></div>
         </div>
@@ -43,6 +46,42 @@
                     <button type="button" onclick="checkCode();">Use</button>
                 </fieldset>
                 <p id="outMessage"></p>
+            </form>
+        </div>
+        <div id="testMenu">
+            <h2>Test Menu <strong>(Experimental)</strong></h2>
+            <form>
+                <fieldset>
+                    <h3>Game</h3>
+                    Time (seconds): <input type="number" min="0" value="120" id="testGame1">
+                    Add enemies: <input type="number" min="0" value="20" id="testGame2">
+                    Add items: <input type="number" min="0" value="20" id="testGame3">
+                    <h3>Player</h3>
+                    Health: <input type="number" value="50" id="testPlayer1">
+                    Kerosene: <input type="number" value="100" id="testPlayer2">
+                    Score: <input type="number" value="0" id="testPlayer3">
+                    Max speed: <input type="number" value="10" id="testPlayer4">
+                    Min speed: <input type="number" value="0" id="testPlayer5">
+                    <h3>Beetle</h3>
+                    Damage: <input type="number" value="0.05" id="testBeetle1">
+                    Health: <input type="number" value="30" id="testBeetle2">
+                    Points: <input type="number" value="20" id="testBeetle3">
+                    Max speed: <input type="number" value="9" id="testBeetle4">
+                    Min speed: <input type="number" value="0" id="testBeetle5">
+                    <h3>Fireman</h3>
+                    Damage: <input type="number" value="0.01" id="testFireman1">
+                    Health: <input type="number" value="10" id="testFireman2">
+                    Points: <input type="number" value="50" id="testFireman3">
+                    Max speed: <input type="number" value="5" id="testFireman4">
+                    Min speed: <input type="number" value="0" id="testFireman5">
+                    <h3>Hound</h3>
+                    Damage: <input type="number" value="0.8" id="testHound1">
+                    Health: <input type="number" value="50" id="testHound2">
+                    Points: <input type="number" value="40" id="testHound3">
+                    Max speed: <input type="number" value="7" id="testHound4">
+                    Min speed: <input type="number" value="0" id="testHound5">
+                    <button type="button" onclick="updateFromMenu();">Update</button>
+                </fieldset>
             </form>
         </div>
         <div id="description">
@@ -189,8 +228,8 @@
                     <img src="images/fireball.png">
                     <p>
                         <strong>Fireball</strong><br>
-                        This is the stuff that comes out of Montag when you press the spacebar. Deals 5 damage to
-                        whatever it hits, other than the shooter.
+                        Montag will shoot a fireball everytime you press the spacebar, if you still have kerosene.
+                        Deals 5 damage to enemies that come into contact with it.
                     </p>
                 </div>
                 <div class="col-md-3">

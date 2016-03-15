@@ -28,7 +28,7 @@ canvas{
 #header{
     padding: 16px;
 }
-#header h1, #header h3, #header h4{
+#header h1, #header h3, #header h4, #header h6{
     color: #ffffff;
     font-family: "Orbitron";
     text-align: center;
@@ -53,7 +53,7 @@ canvas{
     padding: 16px;
     width: 90%;
 }
-#gameOver h3, gameOver h4{
+#gameOver h3, #gameOver h4{
     font-family: "Orbitron";
 }
 #gameOver button{
@@ -70,8 +70,17 @@ canvas{
 }
 #bar{
     background: #c5e3bf;
+    display: block;
     margin-top: 20px;
     padding: 16px;
+}
+#testMenu{
+    background: #cdb5cd;
+    display: none;
+    padding: 16px;
+}
+#testMenu h2, #testMenu h3{
+    font-family: "Orbitron";
 }
 #description{
     background: #99ffff;
