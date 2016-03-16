@@ -80,6 +80,13 @@ function updateFromMenu(){
     player.maxSpeed = parseInt(document.getElementById("testPlayer4").value);
     player.minSpeed = parseInt(document.getElementById("testPlayer5").value);
     //TODO: Add the rest
+    document.getElementById("testGame1").setAttribute("value", time2);
+    document.getElementById("testPlayer1").setAttribute("value", player.getHealth());
+    document.getElementById("testPlayer2").setAttribute("value", player.getKerosene());
+    document.getElementById("testPlayer3").setAttribute("value", player.getScore());
+    document.getElementById("testPlayer4").setAttribute("value", player.maxSpeed);
+    document.getElementById("testPlayer5").setAttribute("value", player.minSpeed);
+    //TODO: Add the rest
 }
 function checkCode(){
     var code = document.getElementById("code");
@@ -227,13 +234,6 @@ function update(){
 }
 window.addEventListener("keydown", function(event){
     switch(event.keyCode){
-        case K_LEFT: //37
-        case K_UP: //38
-        case K_RIGHT: //39
-        case K_DOWN: //40
-        case K_SPACE: //32
-            event.preventDefault();
-            break;
         case 9: //Tab key
             event.preventDefault();
             createEnemies(20);
@@ -246,7 +246,12 @@ window.addEventListener("keydown", function(event){
             event.preventDefault();
             annihilate();
             break;
-        default:
+        case 32: //Left arrow key
+        case 37: //Up arrow key
+        case 38: //Right arrow key
+        case 39: //Down arrow key
+        case 40: //Spacebar
+            event.preventDefault();
             break;
     }
 }, false);

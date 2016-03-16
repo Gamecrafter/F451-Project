@@ -179,6 +179,15 @@ function Beetle(){
     beetle.getPoints = function(){
         return points;
     };
+    beetle.setPoints = function(num){
+        if(typeof num === "number") points = num;
+    };
+    beetle.getDamage = function(){
+        return damage;
+    };
+    beetle.setDamage = function(num){
+        if(typeof num === "number") damage = num;
+    };
     beetle.getHealth = function(){
         return health;
     };
@@ -223,6 +232,15 @@ function Fireman(){
     fireman.getPoints = function(){
         return points;
     };
+    fireman.setPoints = function(num){
+        if(typeof num === "number") points = num;
+    };
+    fireman.getDamage = function(){
+        return damage;
+    };
+    fireman.setDamage = function(num){
+        if(typeof num === "number") damage = num;
+    };
     fireman.getHealth = function(){
         return health;
     };
@@ -263,6 +281,15 @@ function Hound(){
     };
     hound.getPoints = function(){
         return points;
+    };
+    hound.setPoints = function(num){
+        if(typeof num === "number") points = num;
+    };
+    hound.getDamage = function(){
+        return damage;
+    };
+    hound.setDamage = function(num){
+        if(typeof num === "number") damage = num;
     };
     hound.getHealth = function(){
         return health;
