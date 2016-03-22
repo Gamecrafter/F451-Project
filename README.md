@@ -7,3 +7,7 @@ take it one step further by making a "computer" game. This was presented on **Ma
 - CSS
 - HTML
 - JavaScript
+
+###Resources utilized:
+- Bootstrap
+- simpleGame.js
